@@ -15,7 +15,7 @@ int main( )
 	unsigned char aes_input[]="helloworld123456";
 	
 	/* Buffers for Encryption and Decryption. NOTE: I am making my buffers
-	 * 17 here in order to leave one place for the string NULL terminator
+	 * 18 here in order to leave one place for the string NULL terminator
 	 * because I am encrypting and decrypting strings.  Normally, I would not
 	 * be doing this.
 	 */

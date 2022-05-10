@@ -3,6 +3,7 @@
 
 #include <stdio.h>
 #include <stdlib.h>
+#include <iostream>
 #include <openssl/aes.h>
 #include <string.h>
 #include <string>
@@ -11,19 +12,19 @@
 
 using namespace std;
 
-/** 
+/**
  * Implements a AES cipher
  */
 class AES: public CipherInterface
 {
 	/* The public members */
 	public:
-		
+
 		/**
 		 * The default constructor
 	 	 */
 		AES(){}
-			
+
 		/**
 		 * Sets the key to use
 		 * @param key - the key to use
@@ -31,7 +32,7 @@ class AES: public CipherInterface
 		 */
 		virtual bool setKey(const unsigned char* key);
 
-		/**	
+		/**
 		 * Encrypts a plaintext string
 		 * @param plainText - the plaintext string
 		 * @return - the encrypted ciphertext string
@@ -44,12 +45,15 @@ class AES: public CipherInterface
 		 * @return - the plaintext
 		 */
 		virtual unsigned char* decrypt(const unsigned char* cipherText);
-	
-			
+
+
 	/* The protected members */
 	protected:
 
 		//TODO: declare the AES key
+		AES_KEY enc_key, dec_key;
+
+		
 };
 
 

@@ -5,7 +5,7 @@ cipher:	cipher.o DES.o AES.o
 
 
 cipher.o:	cipher.cpp
-	g++ -g -c cipher.cpp 
+	g++ -g -c cipher.cpp
 
 mydes:	mydes.cpp
 	g++ mydes.cpp -o mydes -lcrypto
